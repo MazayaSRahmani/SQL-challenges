@@ -14,7 +14,7 @@ The result provides the total number of views split between laptops and mobile d
 select 
 	sum(case device_type when 'laptop' then 1 else 0 end) as laptop_views,
 	sum(case device_type when 'tablet' then 1 else 0 end) 
-    + sum(case device_type when 'phone' then 1 else 0 end) as mobile_views
+    	+ sum(case device_type when 'phone' then 1 else 0 end) as mobile_views
 from viewership;
 ```
 
@@ -28,7 +28,7 @@ The HAVING clause filters the results to include only those who meet either of t
 ```
 select 
 	employee_id,
-    (case when sum(years_of_experience) >= 8 and count(distinct domain) = 1 then True else False end) as req_1,
+    	(case when sum(years_of_experience) >= 8 and count(distinct domain) = 1 then True else False end) as req_1,
 	(case when sum(years_of_experience) >= 12 and count(distinct domain) = 2 then True else False end) as req_2
 from employee_expertise
 group by employee_id
@@ -43,7 +43,7 @@ The result includes all merchants, showing 0 for those without Apple Pay transac
 ```
 select 
 	merchant_id, 
-    sum(case when payment_method = 'Apple Pay' then transaction_amount else 0 end) as total_transaction
+    	sum(case when payment_method = 'Apple Pay' then transaction_amount else 0 end) as total_transaction
 from applepay_transactions
 group by merchant_id
 order by total_transaction desc;
