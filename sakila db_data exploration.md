@@ -2,9 +2,11 @@
 This project use the Sakila database from the official [MySQL sakila sample database](https://dev.mysql.com/doc/sakila/en/) that can be accessed here.
 
 ### Query to list all actors with the first name 'Scarlett' in the `actor` table.
+'''
 select *
 from actor
 where first_name = 'Scarlett';
+'''
 
 ### Query to count the number of unique last names in the `actor` table.
 select count(distinct last_name) as nama_belakang_unik
