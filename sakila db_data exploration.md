@@ -1,5 +1,6 @@
 ## Database Information
 This project use the Sakila database from the official [MySQL sakila sample database](https://dev.mysql.com/doc/sakila/en/) that can be accessed here.
+---
 
 ### Query to list all actors with the first name 'Scarlett' in the `actor` table.
 ```
