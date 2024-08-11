@@ -3,7 +3,7 @@ In this project the database we're using is a mix of a view synthetic tables.
 
 ---
 
-## Query to sum the views by device type (laptop and mobile) in the `viewership` table.
+### Query to sum the views by device type (laptop and mobile) in the `viewership` table.
 This query uses the SUM function combined with CASE WHEN to count the number of views for specific device types.
 The CASE WHEN clause acts like an if-else condition inside the SUM function. For example:
 1. When the `device_type` is 'laptop', it counts 1, otherwise 0. 
@@ -18,7 +18,8 @@ select
 from viewership;
 ```
 
-## Query to identify Subject Matter Experts (SMEs) in Accenture based on their work experience in specific domains.
+
+### Query to identify Subject Matter Experts (SMEs) in Accenture based on their work experience in specific domains.
 This query identifies employees who qualify as SMEs (Subject Matter Experts) based on two criteria:
 1. The first CASE WHEN condition checks if an employee has 8 or more years of experience in a single domain.
 2. The second CASE WHEN condition checks if an employee has 12 or more years of experience across two distinct domains.
@@ -35,7 +36,8 @@ group by employee_id
 having req_1 = 1 or req_2 = 1;
 ```
 
-## Query to calculate the total transaction volume per merchant for transactions made via Apple Pay, including merchants with zero Apple Pay transactions.
+
+### Query to calculate the total transaction volume per merchant for transactions made via Apple Pay, including merchants with zero Apple Pay transactions.
 This query sums up the transaction amounts for each merchant, specifically focusing on transactions made via Apple Pay.
 The CASE WHEN clause is used to check if the payment method is 'Apple Pay'. If true, it sums the transaction amount; otherwise, it sums 0.
 The result includes all merchants, showing 0 for those without Apple Pay transactions, and orders them by the total transaction volume in descending order.
@@ -49,7 +51,8 @@ group by merchant_id
 order by total_transaction desc;
 ```
 
-## Query to add a grade column (`indeks_nilai`) to the `tabel_nilai` table based on the final score.
+
+### Query to add a grade column (`indeks_nilai`) to the `tabel_nilai` table based on the final score.
 This query uses the CASE WHEN clause to assign grades (`indeks_nilai`) based on the `nilai_akhir` (final score).
 The grading scale is:
 1. 'A' for scores greater than or equal to 80
