@@ -97,9 +97,11 @@ This project use the database provided by MySQL called [The World Database](http
   having banyaknya_bentuk_pemerintahan < 10;
   ```
 
-## Query to calculate the difference in GNP (GNP - GNPOLD) per region in the `country` table, filtering regions with a positive difference.
-select region, sum(gnp - gnpold) as selisih
-from country
-group by region 
-having selisih > 0
-order by selisih desc;
+## 13. Query to calculate the difference in GNP (GNP - GNPOLD) per region in the `country` table, filtering regions with a positive difference.
+  ```
+  select region, sum(gnp - gnpold) as selisih
+  from country
+  group by region 
+  having selisih > 0
+  order by selisih desc;
+  ```
